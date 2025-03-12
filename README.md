@@ -78,7 +78,7 @@ Dieses Projekt ist unter der [MIT-Lizenz](LICENSE) lizenziert.
 
 Das "Hide Eye" Icon wurde von Leonid Tsvetkov erstellt und ist unter der [Creative Commons Attribution License (CC BY)](https://creativecommons.org/licenses/by/4.0/) lizenziert.
 
-Quelle: [Hide Eye Icon](https://icon-icons.com/icon/hide-eye/169442)
+Quelle: [Hide Eye Icon](https://www.svgrepo.com/svg/457690/hide-eye)
 
 ## Beitragen
 
