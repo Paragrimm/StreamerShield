@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "StreamerShield",
+  "version": "1.1",
+  "description": "StreamerShield bietet Schutz für Content Creator und Streamer, indem es sensible Wörter auf Webseiten ausblendet. Die Erweiterung erhält das Layout der Seite, während potenziell problematische Inhalte versteckt werden. Perfekt für Live-Streams, Aufnahmen oder Präsentationen, bei denen unerwünschte Inhalte nicht sichtbar sein sollten.",
+  "icons": {
+    "48": "48x48.png",
+    "96": "96x96.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_icon": {
+      "19": "19x19.png",
+      "38": "38x38.png"
+    },
+    "default_title": "StreamerShield",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["browser-polyfill.js", "word_hider.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["browser-polyfill.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

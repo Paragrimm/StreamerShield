@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Einstellungen: Privatsphäre für Content Creator</h1>
+    
+    <div class="word-list-container">
+      <h2>Wortliste</h2>
+      <p class="description">Geben Sie hier die Wörter ein, die auf Webseiten versteckt werden sollen. Ein Wort pro Zeile.</p>
+      
+      <div class="textarea-container">
+        <textarea id="wordList" rows="10" placeholder="Geben Sie hier die zu versteckenden Wörter ein (ein Wort pro Zeile)"></textarea>
+      </div>
+      
+      <div class="options-container">
+        <div class="option">
+          <input type="checkbox" id="caseSensitive">
+          <label for="caseSensitive">Groß-/Kleinschreibung beachten</label>
+        </div>
+        
+        <div class="option">
+          <input type="checkbox" id="wholeWords">
+          <label for="wholeWords">Nur ganze Wörter verstecken</label>
+        </div>
+      </div>
+      
+      <div class="buttons">
+        <button id="saveButton" class="primary">Speichern</button>
+        <button id="resetButton">Zurücksetzen</button>
+      </div>
+    </div>
+    
+    <div class="status-message" id="statusMessage"></div>
+    
+    <div class="footer">
+      <p class="attribution">Icon: "Hide Eye" von Leonid Tsvetkov, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></p>
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

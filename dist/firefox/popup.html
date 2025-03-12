@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>StreamerShield</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>StreamerShield</h1>
+    
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="enableExtension">
+        <span class="slider round"></span>
+      </label>
+      <span id="statusText">Deaktiviert</span>
+    </div>
+    
+    <div class="actions">
+      <button id="editWordList">Wortliste bearbeiten</button>
+    </div>
+    
+    <div class="stats">
+      <p>Wörter auf der aktuellen Seite versteckt: <span id="hiddenCount">0</span></p>
+    </div>
+    <a href="https://ko-fi.com/Q5Q0HH4TZ" target="_blank" rel="noopener"><img height="36" style="border:0px;height:36px;" src="https://storage.ko-fi.com/cdn/kofi1.png?v=3" border="0" alt="Buy Me a Coffee at ko-fi.com"></a>
+    <div class="footer">
+      <p class="attribution">Icon: "Hide Eye" von Leonid Tsvetkov, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></p>
+    </div>
+  </div>
+  
+  <script src="../browser-polyfill.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
