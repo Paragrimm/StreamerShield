@@ -1,5 +1,7 @@
 # StreamerShield
 
+[![built with Codeium](https://codeium.com/badges/main)]([https://codeium.com?repo_name=exafunction%2Fcodeium.vim](https://codeium.com/refer?referral_code=ggas84ou7cgqfvd1)) (Ref-Link)
+
 Eine Browser-Erweiterung zum Ausblenden sensibler Wörter auf Webseiten.
 
 ## Beschreibung
