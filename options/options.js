@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const saveButton = document.getElementById('saveButton');
   const resetButton = document.getElementById('resetButton');
   const statusMessage = document.getElementById('statusMessage');
+  const browser = browser ?? chrome;
   
   // Gespeicherte Einstellungen laden
   browser.storage.local.get(['wordList', 'caseSensitive', 'wholeWords'], function(result) {
