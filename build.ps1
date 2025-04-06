@@ -32,7 +32,6 @@ New-Item -Path $chromeDir -ItemType Directory -Force | Out-Null
 Write-Step "Kopiere die Dateien für Firefox"
 Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "manifest.json") -Destination $firefoxDir
 Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "background.js") -Destination $firefoxDir
-Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "browser-polyfill.js") -Destination $firefoxDir
 Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "content_scripts\word_hider.js") -Destination $firefoxDir
 Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "popup\popup.html") -Destination (Join-Path -Path $firefoxDir -ChildPath "popup.html")
 Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "popup\popup.js") -Destination (Join-Path -Path $firefoxDir -ChildPath "popup.js")
@@ -51,7 +50,8 @@ foreach ($icon in $iconFiles) {
     # Wenn das Icon existiert, kopiere es, ansonsten erstelle eine leere Datei
     if (Test-Path -Path $iconPath) {
         Copy-Item -Path $iconPath -Destination $destPath -Force
-    } else {
+    }
+    else {
         New-Item -Path $destPath -ItemType File -Force | Out-Null
         Write-Host "  Warnung: Icon $icon nicht gefunden, leere Datei erstellt." -ForegroundColor Yellow
     }
@@ -61,7 +61,6 @@ foreach ($icon in $iconFiles) {
 Write-Step "Kopiere die Dateien für Chrome"
 Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "manifest.chrome.json") -Destination (Join-Path -Path $chromeDir -ChildPath "manifest.json")
 Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "background.js") -Destination $chromeDir
-Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "browser-polyfill.js") -Destination $chromeDir
 Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "content_scripts\word_hider.js") -Destination $chromeDir
 Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "popup\popup.html") -Destination (Join-Path -Path $chromeDir -ChildPath "popup.html")
 Copy-Item -Path (Join-Path -Path $rootDir -ChildPath "popup\popup.js") -Destination (Join-Path -Path $chromeDir -ChildPath "popup.js")
@@ -79,7 +78,8 @@ foreach ($icon in $iconFiles) {
     # Wenn das Icon existiert, kopiere es, ansonsten erstelle eine leere Datei
     if (Test-Path -Path $iconPath) {
         Copy-Item -Path $iconPath -Destination $destPath -Force
-    } else {
+    }
+    else {
         New-Item -Path $destPath -ItemType File -Force | Out-Null
         Write-Host "  Warnung: Icon $icon nicht gefunden, leere Datei erstellt." -ForegroundColor Yellow
     }

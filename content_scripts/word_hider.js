@@ -7,6 +7,9 @@ let wholeWords = true;
 let isEnabled = false;
 let hiddenElements = [];
 let hiddenCount = 0;
+if (typeof browser === "undefined") {
+  var browser = chrome;
+}
 
 // Einstellungen laden
 browser.storage.local.get(['wordList', 'caseSensitive', 'wholeWords', 'enabled'], function(result) {
@@ -23,6 +26,7 @@ browser.storage.local.get(['wordList', 'caseSensitive', 'wholeWords', 'enabled']
 
 // Listener für Nachrichten vom Popup oder den Options
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  console.log(message);
   if (message.action === 'enable') {
     isEnabled = true;
     if (wordList.length > 0) {
@@ -69,6 +73,7 @@ function scanAndHideWords() {
   textNodes.forEach(node => {
     const originalText = node.nodeValue;
     let modifiedText = originalText;
+    console.log(originalText);
     
     // Für jedes Wort in der Liste prüfen
     wordList.forEach(word => {

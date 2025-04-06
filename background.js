@@ -1,4 +1,7 @@
 // Hintergrund-Skript für die Privatsphäre-Erweiterung für Content Creator
+  if (typeof browser === "undefined") {
+    var browser = chrome;
+  }
 
 // Standardeinstellungen festlegen
 const defaultSettings = {

@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const statusText = document.getElementById('statusText');
   const optionsButton = document.getElementById('editWordList');
   const hiddenCount = document.getElementById('hiddenCount');
+  if (typeof browser === "undefined") {
+    var browser = chrome;
+  }
   
   // Status der Erweiterung laden
   browser.storage.local.get('enabled', function(result) {
